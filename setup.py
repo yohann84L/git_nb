@@ -11,6 +11,7 @@ setup(
     version='0.1',
     description='Python package to execute git command in notebook',
     long_description=readme(),
+    long_description_content_type="text/x-rst",
     url='http://github.com/yohann84L/git_nb',
     keywords="git python repo repository pull clone notebook nb",
     author='Yohann Lereclus',
