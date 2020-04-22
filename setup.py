@@ -7,11 +7,11 @@ def readme():
 
 
 setup(
-    name='gitnb',
+    name='git_nb',
     version='0.1',
     description='Python package to execute git command in notebook',
     long_description=readme(),
-    url='http://github.com/yohann84L/gitnb',
+    url='http://github.com/yohann84L/git_nb',
     keywords="git python repo repository pull clone notebook nb",
     author='Yohann Lereclus',
     author_email='lereclus84L@gmail.com',
@@ -21,6 +21,6 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=['gitnb'],
+    packages=['git_nb'],
     zip_safe=False
 )
