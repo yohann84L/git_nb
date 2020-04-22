@@ -16,6 +16,11 @@ setup(
     author='Yohann Lereclus',
     author_email='lereclus84L@gmail.com',
     license='MIT',
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+    ],
     packages=['gitnb'],
     zip_safe=False
 )
