@@ -13,7 +13,7 @@ class TestBase(unittest.TestCase):
         cfg.repo_name = "git_nb_test_repo"
 
         path = "../../"
-        git_nb.git_clone(path)
+        git_nb.git_clone(path, silent=False)
 
         check = False
         # Check if repo cloned

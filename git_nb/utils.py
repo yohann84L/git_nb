@@ -1,5 +1,5 @@
-import os
 import pathlib
+import subprocess
 
 import requests
 
@@ -7,10 +7,17 @@ from .config import cfg
 
 
 def run(cmd_string: str, silent: bool):
-    if silent:
-        os.popen(cmd_string).read()
-    else:
-        print(os.popen(cmd_string).read())
+    p = subprocess.Popen(cmd_string, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, )
+    stdout = []
+    while True:
+        line = p.stdout.readline()
+        if not isinstance(line, str):
+            line = line.decode('utf-8')
+        stdout.append(line)
+        if not silent:
+            print(line)
+        if line == '' and p.poll() is not None:
+            break
 
 
 def check_folder(path: str) -> pathlib.Path:
