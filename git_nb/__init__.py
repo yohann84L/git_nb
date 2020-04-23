@@ -1,2 +1,2 @@
-from .config import Config
-from .base import Repo
+from .config import cfg
+from .func import *

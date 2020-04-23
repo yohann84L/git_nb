@@ -15,19 +15,34 @@ Using pip :
 Example
 -------
 
-Clone a repository
-~~~~~~~~~~~~~~~~~~
+Set your config
+~~~~~~~~~~~~~~~
 
 .. code:: python
 
-    from git_nb import Repo
+    from git_nb import cfg
 
-    repo = Repo(username="yohann84L", repo_name="git_nb")
-    repo.git_clone()
+    cfg.username = "yourusername"
+    cfg.email = "youremail"
+
+Clone a repository
+~~~~~~~~~~~~~~~~~~
+
+If the repository is private, you'll invite to write your password.
+
+.. code:: python
+
+    import git_nb
+    from git_nb import cfg
+
+    cfg.repo_name = "yourrepo"
+    git_nb.git_clone()
 
 Pull
 ~~~~
 
 .. code:: python
 
-    repo.git_pull()
+    import git_nb
+
+    git_nb.git_pull()
