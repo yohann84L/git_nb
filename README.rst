@@ -28,7 +28,7 @@ Set your config
 Clone a repository
 ~~~~~~~~~~~~~~~~~~
 
-If the repository is private, you'll invite to write your password.
+If the repository is private, you will be invited to write your password.
 
 .. code:: python
 
