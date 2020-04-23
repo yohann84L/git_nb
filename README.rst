@@ -25,3 +25,9 @@ Clone a repository
     repo = Repo(username="yohann84L", repo_name="git_nb")
     repo.git_clone()
 
+Pull
+~~~~
+
+.. code:: python
+
+    repo.git_pull()
