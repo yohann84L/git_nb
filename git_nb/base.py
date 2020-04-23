@@ -8,8 +8,8 @@ from .utils import run
 
 
 class Repo(object):
-    def __init__(self, username: str, email: str, repo_name: str, path: str = None):
-        self.config = Config(username, email, repo_name)
+    def __init__(self, username: str, repo_name: str, path: str = None):
+        self.config = Config(username, repo_name)
         if path is None:
             path = "/"
         self._path = Path(path)

@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='git_nb',
-    version='0.1',
+    version='0.1.2',
     description='Python package to execute git command in notebook',
     long_description=readme(),
     long_description_content_type="text/x-rst",
