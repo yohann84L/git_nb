@@ -1,9 +1,13 @@
+import os
 import pathlib
 import subprocess
+from typing import Union
 
 import requests
 
-from .config import cfg
+from git_nb.config import cfg
+
+T_striter = Union[str, tuple, list]
 
 
 def run(cmd_string: str, silent: bool):
@@ -20,9 +24,23 @@ def run(cmd_string: str, silent: bool):
             break
 
 
+def write_cmd(base_cmd: str, extra: T_striter) -> str:
+    #  param check
+    if len(base_cmd) == 0:
+        raise ValueError(f"Command is null: {base_cmd}")
+
+    if extra is None:
+        return base_cmd
+    else:
+        if isinstance(extra, str):
+            return f"{base_cmd} {extra.strip()}"
+        else:
+            return f"{base_cmd} {' '.join(map(str.strip, extra))}"
+
+
 def check_folder(path: str) -> pathlib.Path:
     if path is None:
-        path = "/"
+        path = os.getcwd()
     path = pathlib.Path(path)
     if not path.exists():
         print("Folder doesn't exist.")
